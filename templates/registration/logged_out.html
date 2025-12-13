@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block page_title %}خروج{% endblock %}
+
+{% block content %}
+
+<div class="text-center mt-5">
+    <h3 class="text-success">با موفقیت خارج شدی!</h3>
+    <a href="{% url 'login' %}" class="btn btn-primary mt-3">ورود دوباره</a>
+</div>
+
+{% endblock %}

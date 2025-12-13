@@ -1,0 +1,233 @@
+/* ===== BASE STYLES ===== */
+
+/* فارسی سازی و فونت */
+* {
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding-top: 80px; /* برای نوار بالایی fixed */
+}
+
+/* ===== NAVBAR STYLES ===== */
+.custom-navbar {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    box-shadow: 0 4px 20px rgba(106, 17, 203, 0.3);
+    padding: 12px 0;
+    transition: all 0.3s ease;
+}
+
+.custom-navbar:hover {
+    box-shadow: 0 6px 25px rgba(106, 17, 203, 0.4);
+}
+
+/* لوگو */
+.navbar-brand.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white !important;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand.logo:hover {
+    transform: scale(1.05);
+}
+
+.brand-text {
+    margin-right: 10px;
+}
+
+.brand-highlight {
+    color: #ffdd40;
+    font-weight: 800;
+}
+
+/* آیکون لوگو */
+.navbar-brand.logo i {
+    font-size: 2rem;
+    margin-left: 10px;
+    color: #ffdd40;
+}
+
+/* منوها */
+.nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 15px !important;
+    margin: 0 5px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    color: white !important;
+}
+
+.nav-link i {
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white !important;
+    transform: translateX(-5px);
+}
+
+/* بخش کاربر */
+.user-dropdown .user-menu {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding: 8px 15px !important;
+}
+
+.user-avatar i {
+    font-size: 1.8rem;
+    color: #ffdd40;
+}
+
+.user-name {
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+/* دکمه‌های ورود/ثبت‌نام */
+.btn-login, .btn-signup {
+    border-radius: 50px;
+    padding: 8px 20px !important;
+    font-weight: 600;
+}
+
+.btn-login {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-signup {
+    background: linear-gradient(135deg, #ffdd40 0%, #ff9500 100%);
+    color: #333 !important;
+    border: none;
+}
+
+.btn-signup:hover {
+    background: linear-gradient(135deg, #ff9500 0%, #ffdd40 100%);
+    color: #000 !important;
+}
+
+/* جستجو */
+.search-container {
+    margin-right: 15px;
+}
+
+.search-form {
+    min-width: 250px;
+}
+
+.search-input {
+    border-radius: 50px 0 0 50px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding-right: 20px;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.btn-search {
+    border-radius: 0 50px 50px 0;
+    background: linear-gradient(135deg, #ffdd40 0%, #ff9500 100%);
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+}
+
+/* اعلان */
+.notification-icon {
+    position: relative;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    font-size: 0.7rem;
+    padding: 4px 7px;
+}
+
+/* ===== BREADCRUMB ===== */
+.custom-breadcrumb {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 12px 20px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "‹";
+    color: #6a11cb;
+    font-size: 1.2rem;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-container {
+    min-height: calc(100vh - 200px);
+    padding: 30px 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .search-form {
+        min-width: 100%;
+        margin-top: 15px;
+    }
+    
+    .user-dropdown .user-menu {
+        justify-content: center;
+        margin: 10px 0;
+    }
+    
+    .nav-link {
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .navbar-brand.logo {
+        font-size: 1.5rem;
+    }
+}
